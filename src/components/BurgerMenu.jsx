@@ -20,7 +20,7 @@ const BurgerMenu = ({ addToBasket, updateClickedBurgers }) => {
     
     updateClickedBurgers((prev) => [...prev, burgers[index].name]);    
   };
-  
+
   return (
     <div className="burgerSection">
       <h2>Burgers</h2>
