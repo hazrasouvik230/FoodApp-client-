@@ -1,0 +1,1 @@
+export const baseUrl = `https://foodapp-wtsi.onrender.com`
