@@ -7,31 +7,14 @@ import "react-toastify/dist/ReactToastify.css";
 const PaymentSelection = ({ total }) => {
   const navigate = useNavigate();
 
-  const handleProceedPayment = async () => {
-    try {
-      const authToken = localStorage.getItem("authToken");
-      if (!authToken) {
-        toast.error("Login first to proceed to payment");
-        return;
-      }
-  
-      const response = await fetch("/api/payment", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${authToken}`,
-        },
-      });
-  
-      if (response.ok) {
-        navigate("/success");
-      } else {
-        throw new Error("Payment failed");
-      }
-    } catch (error) {
-      toast.error("Network issue, please try again");
+  const handleProceedPayment = () => {
+    const authToken = localStorage.getItem("authToken");
+    if (authToken) {
+      navigate("/success");
+    } else {
+      toast.error("Login first to proceed to payment");
     }
   };
-  
 
   return (
     <div className="paymentSelection">
