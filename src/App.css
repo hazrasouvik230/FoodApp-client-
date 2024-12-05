@@ -598,6 +598,38 @@ label {
   border-radius: 12px;
 }
 
+.moreBox {
+  position: absolute;
+  top: 4rem;
+  right: 1rem;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.moreBox p {
+  padding: 0.5rem;
+  border-radius: .5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.moreBox p:hover {
+  background: orange;
+  color: white;
+  transition: all .5s ease;
+}
+
 .responsiveNav {
   display: none;
 }
